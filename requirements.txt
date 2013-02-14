@@ -1,0 +1,32 @@
+PIL
+django==1.4
+#python-lxml
+#MySQL-python==1.2.3
+
+South
+pytils
+django-constance
+django-picklefield
+python-magic
+django-cleanup
+sorl-thumbnail
+django-annoying
+django-js-utils
+django-pagination
+django-simple-captcha
+django-email-obfuscator
+django-admin-honeypot # Немного безопасности...
+
+# Для админки
+django-grappelli
+django-filebrowser
+
+# Для блога
+django-tagging
+django-tagging-autocomplete
+
+webtest
+django-webtest
+coverage >= 3.0
+django-coverage
+django-eml-email-backend
