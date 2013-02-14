@@ -5,6 +5,7 @@ from django.conf.urls import patterns, include, url
 
 from django.contrib import admin
 from filebrowser.sites import site
+from zinnia.sitemaps import TagSitemap, EntrySitemap, CategorySitemap, AuthorSitemap
 
 admin.autodiscover()
 
@@ -40,3 +41,15 @@ else:
         url(r'^admin.php', include('admin_honeypot.urls')),
         url(r'^admin-secret/', include(admin.site.urls)),
     )
+
+sitemaps = {
+    'tags': TagSitemap,
+    'blog': EntrySitemap,
+    'authors': AuthorSitemap,
+    'categories': CategorySitemap,
+}
+
+urlpatterns += patterns('django.contrib.sitemaps.views',
+    url(r'^sitemap.xml$', 'index', {'sitemaps': sitemaps}),
+    url(r'^sitemap-(?P<section>.+)\.xml$', 'sitemap', {'sitemaps': sitemaps}),
+)

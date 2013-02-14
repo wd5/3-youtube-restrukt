@@ -109,6 +109,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.comments',
+    'django.contrib.sitemaps',
     'grappelli',
     'filebrowser',
     'django.contrib.admin',
@@ -205,7 +206,7 @@ ZINNIA_URL_SHORTENER_BACKEND = 'zinnia.url_shortener.backends.bitly'
 ZINNIA_SPAM_CHECKER_BACKENDS = ('zinnia.spam_checker.backends.mollom',)
 XMLRPC_METHODS = ZINNIA_XMLRPC_METHODS
 
-GRAPPELLI_ADMIN_TITLE = 'Restruct.Me'
+GRAPPELLI_ADMIN_TITLE = u'Restruct.Me - Будем тсроить новый рай!..'
 
 DIRECTORY = 'filebrowser'
 FILEBROWSER_DIRECTORY = 'filebrowser'
