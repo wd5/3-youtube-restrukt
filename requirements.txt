@@ -29,6 +29,8 @@ django-mptt
 django-blog-zinnia
 tweepy
 django-bitly
+beautifulsoup4
+zinnia-theme-html5
 
 webtest
 django-webtest

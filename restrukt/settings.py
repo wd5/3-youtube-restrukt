@@ -79,6 +79,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'zinnia_html5.middleware.DraftHTML5ValidatorCleaner',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -127,6 +128,7 @@ INSTALLED_APPS = (
 
     'tagging',
     'mptt',
+    'zinnia_html5',
     'zinnia',
     'tweepy',
     'django_bitly',
