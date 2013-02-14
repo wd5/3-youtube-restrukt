@@ -16,6 +16,7 @@ django-pagination
 django-simple-captcha
 django-email-obfuscator
 django-admin-honeypot # Немного безопасности...
+django-robots
 
 # Для админки
 django-grappelli
@@ -24,6 +25,10 @@ django-filebrowser
 # Для блога
 django-tagging
 django-tagging-autocomplete
+django-mptt
+django-blog-zinnia
+tweepy
+django-bitly
 
 webtest
 django-webtest

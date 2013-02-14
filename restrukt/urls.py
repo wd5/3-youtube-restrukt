@@ -9,6 +9,9 @@ from filebrowser.sites import site
 admin.autodiscover()
 
 urlpatterns = patterns('',
+    url(r'^', include('zinnia.urls.__init__')),
+    url(r'^comments/', include('django.contrib.comments.urls')),
+    url(r'^xmlrpc/$', 'django_xmlrpc.views.handle_xmlrpc'),
 
     # Сторонние приложения
     url(r'^jsurls.js$', 'django_js_utils.views.jsurls', {}, 'jsurls'),

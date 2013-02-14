@@ -4,6 +4,7 @@ import sys
 import os.path
 import logging
 from os import path
+from zinnia.xmlrpc import ZINNIA_XMLRPC_METHODS
 
 try:
     from settings_local import *
@@ -106,6 +107,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.comments',
     'grappelli',
     'filebrowser',
     'django.contrib.admin',
@@ -121,6 +123,13 @@ INSTALLED_APPS = (
     'constance.backends.database',
     'constance',
     'picklefield',
+    'robots',
+
+    'tagging',
+    'mptt',
+    'zinnia',
+    'tweepy',
+    'django_bitly',
 
     'webtest',
     'coverage',
@@ -189,6 +198,10 @@ LOGGING = {
         },
     },
 }
+
+ZINNIA_URL_SHORTENER_BACKEND = 'zinnia.url_shortener.backends.bitly'
+ZINNIA_SPAM_CHECKER_BACKENDS = ('zinnia.spam_checker.backends.mollom',)
+XMLRPC_METHODS = ZINNIA_XMLRPC_METHODS
 
 GRAPPELLI_ADMIN_TITLE = 'Restruct.Me'
 
