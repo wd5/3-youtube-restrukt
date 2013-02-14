@@ -206,7 +206,15 @@ ZINNIA_URL_SHORTENER_BACKEND = 'zinnia.url_shortener.backends.bitly'
 ZINNIA_SPAM_CHECKER_BACKENDS = ('zinnia.spam_checker.backends.mollom',)
 XMLRPC_METHODS = ZINNIA_XMLRPC_METHODS
 
-GRAPPELLI_ADMIN_TITLE = u'Restruct.Me - Будем тсроить новый рай!..'
+GRAPPELLI_ADMIN_TITLE = u'Restruct.Me - Будем строить новый рай!..'
+
+DEFAULT_FROM_EMAIL = 'no-replay@restrukt.me'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'no-replay@restrukt.me'
+EMAIL_HOST_PASSWORD = ''
+EMAIL_DEBUGLEVEL = 0
+EMAIL_PORT = 587
 
 DIRECTORY = 'filebrowser'
 FILEBROWSER_DIRECTORY = 'filebrowser'
@@ -227,3 +235,5 @@ try:
     from settings_local import *
 except ImportError:
     pass
+
+print EMAIL_HOST_PASSWORD
