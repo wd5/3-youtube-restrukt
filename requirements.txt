@@ -31,6 +31,7 @@ tweepy
 django-bitly
 beautifulsoup4
 zinnia-theme-html5
+django-factory-boy
 
 webtest
 django-webtest
