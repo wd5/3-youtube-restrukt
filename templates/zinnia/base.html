@@ -25,22 +25,24 @@
 {% endblock %}
 
 {% block sidebar %}
-    <div id="widget-video-youtube">
-        <h3>В эфире</h3>
-        <ul>
-            {% for video in videos_youtube_latest %}
-                <li>
-                    <a class="youtube-screen" href="{{ video.link }}" target="_blank">
-                        {{ video.link|youtube_preview_image_small:video.name|safe }}
-                    </a>
-                    <br/>
-                    <a class="post-link" href="{{ video.post.get_absolute_url }}">
-                        {{ video.post.title }}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
+    {% if videos_youtube_latest %}
+        <div id="widget-video-youtube">
+            <h3>В эфире</h3>
+            <ul>
+                {% for video in videos_youtube_latest %}
+                    <li>
+                        <a class="youtube-screen" href="{{ video.link }}" target="_blank">
+                            {{ video.link|youtube_preview_image_small:video.name|safe }}
+                        </a>
+                        <br/>
+                        <a class="post-link" href="{{ video.post.get_absolute_url }}">
+                            {{ video.post.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
     <div id="widget-categories" class="widget">
         <h3>{% trans "Categories" %}</h3>
         {% get_categories %}
