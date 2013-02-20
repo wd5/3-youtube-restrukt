@@ -13,6 +13,6 @@ class PostVideoYouTube(models.Model):
     pub_date = models.DateTimeField('Дата публикации', default=datetime.now)
 
     class Meta:
-        ordering = ()
+        ordering = ('priority', 'pub_date')
         verbose_name = 'Ссылка на видео'
         verbose_name_plural = 'Видео c YouTube'
