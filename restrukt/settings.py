@@ -91,6 +91,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
     'constance.context_processors.config',
+    'apps.video.context_processors.videos_youtuve',
 )
 
 ROOT_URLCONF = 'restrukt.urls'
@@ -133,6 +134,7 @@ INSTALLED_APPS = (
     'zinnia',
     'tweepy',
     'django_bitly',
+    'apps.video',
 
     'webtest',
     'coverage',
@@ -229,7 +231,9 @@ MARKITUP_FILTER = ('markdown.markdown', {'safe_mode': True})
 MARKITUP_FILTER = ('django.contrib.markup.templatetags.markup.textile', {})
 
 CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'
-CONSTANCE_CONFIG = {}
+CONSTANCE_CONFIG = {
+    'VIDEO_YOUTUBE_COUNT_AT_HOME_PAGE': (u'10', u'Кол-во видео на главной'),
+}
 
 try:
     from settings_local import *
